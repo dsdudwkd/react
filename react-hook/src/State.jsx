@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 /* 
 Hook : 
 리액트는 클래스형과 함수형 컴포넌트로 구분한다
@@ -21,13 +21,21 @@ props의 단점은 컴포넌트 내부에서 값을 변경할 수 없다
 */
 function State(props) {
 
-    let name = 'Do';
+    // let name = 'Do';
 
-    const clickEvent=()=>{
-        name = name === 'Do' ?  '응만' : 'dsdudwkd';
-        console.log(name)
-        document.getElementById('name').innerText = name;
+    // const clickEvent=()=>{
+    //     name = name === 'Do' ?  '응만' : 'dsdudwkd';
+    //     console.log(name)
+    //     document.getElementById('name').innerText = name;
     
+    // }
+
+    //hook이나 외부에서 가져오는 것들은 import되어 있는지 꼭 확인하기
+    const [name, setName] = useState('Do');
+
+    const clickEvent = () => {
+        setName(name === 'Do'? '응만' : 'dsdudwkd');
+        console.log(name);
     }
     return (
         <div>
