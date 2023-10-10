@@ -9,7 +9,7 @@ useEffect와 useState를 사용해서 카운트 다운 만들기
 */
 function EffectEx(props) {
 
-    const [time, setTime] = useState(5);
+    const [time, setTime] = useState(10);
 
     useEffect(()=>{
         const countDown = () => {
