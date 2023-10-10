@@ -12,6 +12,11 @@ import StateEx from './StateEx';
 import Effect from './Effect';
 import EffectMember from './EffectMember';
 import EffectEx from './EffectEx';
+import Context from './Context';
+import { DarkMode, ColorTheme } from './component/DarkMode';
+import { Theme } from './component/Theme';
+import ContextTheme from './ContextTheme';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,9 +30,15 @@ root.render(
     {/* <State />
     <StateCount />
     <StateEx /> */}
-    <Effect />
+    {/* <Effect />
     <EffectMember />
-    <EffectEx />
+    <EffectEx /> */}
+    <hr />
+    <Context />
+    <DarkMode />
+    <Theme>
+      <ContextTheme />
+    </Theme>
   </React.StrictMode>
 );
 
