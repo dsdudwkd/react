@@ -1,0 +1,8 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.title{
+    font-size: 100px;
+    background-color: gray;
+}

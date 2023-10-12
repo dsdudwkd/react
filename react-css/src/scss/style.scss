@@ -1,0 +1,26 @@
+@import './component.scss';
+
+.container{
+    color: $colorGray;
+    .box{
+        background-color: $colorCoral;
+        opacity: 0.7;
+        transition: 300ms;
+        @include square(1);
+        &.red{//&는 자식요소가 아닌 box에 red요소를 추가 붙는 것 className = 'box red'와 같은 의미
+            background-color: $colorRed;
+            @include square(5);
+        }
+        &.pink{
+            background-color: $colorPink;
+            @include square(3)
+        }
+        &.purple{
+            background-color: $colorPurple;
+            @include square(6);
+        }
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
