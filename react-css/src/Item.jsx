@@ -11,7 +11,7 @@ function Item(props) {
         fontSize : '150px'
     }
     return (
-        <div className='containder'>
+        <div className='container'>
             <h1 className='title'>리액트 기본 css 작성 방식</h1>
 
             <p style={{

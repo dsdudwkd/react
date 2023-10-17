@@ -3,22 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Item from './Item';
-import ScssItem from './ScssItem';
-// import StyleComponent from './StyleComponent';
-import GlobalStyle from './GlobalStyle';
-import './index.css';
-import TailWind from './TailWind';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    {/* <App /> */}
-    <Item />
-    {/* <ScssItem /> */}
-    {/* <StyleComponent /> */}
-    {/* <TailWind /> */}
+    <App />
   </React.StrictMode>
 );
 

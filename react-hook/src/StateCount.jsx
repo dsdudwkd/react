@@ -8,7 +8,7 @@ function StateCount(props) {
 
     return (
         <div>
-            totalNum : {count}{count > 10 ? '업' : '다운'}
+            totalNum : {count}{count < 10 ? '업' : '다운'}
             <Counter totalNum={count} onClick={btnEvent} /> 
         </div>
     );

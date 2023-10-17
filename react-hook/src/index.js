@@ -27,15 +27,15 @@ root.render(
     <Props2 name="메가" local="강남역" content="자바스크립트" age={40} />
     <Event /> */}
     <hr />
-    {/* <State />
-    <StateCount />
-    <StateEx /> */}
-    {/* <Effect />
-    <EffectMember />
-    <EffectEx /> */}
+    {/* <State /> */}
+    {/* <StateCount /> */}
+    {/* <StateEx /> */}
+    {/* <Effect /> */}
+    {/* <EffectMember /> */}
+    {/* <EffectEx /> */}
     <hr />
-    <Context />
-    <DarkMode />
+    {/* <Context /> */}
+    {/* <DarkMode /> */}
     <Theme>
       <ContextTheme />
     </Theme>
