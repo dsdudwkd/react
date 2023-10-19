@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Item from './Item';
 import ScssItem from './ScssItem';
-// import StyleComponent from './StyleComponent';
+import StyleComponent from './StyleComponent';
 import GlobalStyle from './GlobalStyle';
 import './index.css';
 import TailWind from './TailWind';
@@ -15,10 +15,10 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     {/* <App /> */}
-    <Item />
+    {/* <Item /> */}
     {/* <ScssItem /> */}
     {/* <StyleComponent /> */}
-    {/* <TailWind /> */}
+    <TailWind />
   </React.StrictMode>
 );
 

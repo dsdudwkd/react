@@ -40,13 +40,12 @@ function App() {
         </nav>
 
         <Routes>
-          {/* <Route path='/' element={<Home />}  errorElement={<NotFound />}/> */}
-          <Route path='*' element={<NotFound />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/page1' element={<Page1 />} />
           <Route path='/page2' element={<Page2 />} />
           <Route path='/itemList' element={<ItemList/>} />
-          <Route path='/items/:id' element={<ItemDetail />} />
-          {/* 경로에 :이 붙는 경우 :은 동적인 값에 대한 매개변수 */}
+          <Route path='/items/:id' element={<ItemDetail />} />{/* 경로에 :이 붙는 경우 :은 동적인 값에 대한 매개변수 */}
+          <Route path='*' element={<NotFound />}/>
         </Routes>
       </Router>
     </>

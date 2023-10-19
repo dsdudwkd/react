@@ -9,15 +9,36 @@ function Header(props) {
 
     const [show, setShow] = useState(false); //header의 background의 보여지는 것에 대한 상태(class명에 on 유무에 따라)
     useEffect(()=>{
-        window.addEventListener('scroll', ()=>{
-            if(window.scrollY > 100){
+        
+           /*  if(window.scrollY > 100){
                 console.log(window.scrollY, show);
                 setShow(true);
             } else {
                 setShow(false);
+            } */
+
+            const scrollEvent = () => {
+                if(window.scrollY > 100 && !show){
+                    setShow(true);
+                } else if(window.scrollY <= 100 && show){
+                    setShow(false);
+                }
+                console.log(window.scrollY, show);
             }
-        })
-    },[])
+            window.addEventListener('scroll', scrollEvent);
+            
+            //조건이 맞을 경우 이벤트를 삭제해 한 번만 실행하게끔
+            return () => {
+                window.removeEventListener('scroll', scrollEvent)
+            }
+    },[show]) //[]을 넣는 이유는 useEffect 효과가 마운트 될 때 한번만 실행되도록 하도록 하는 설정
+    
+    /* 
+    조건을 만족해도 setShow값이 false를 계속 출력하는 이유
+    현재 조건은 스크롤할 때마다 useEffect 계속 마운트가 되는 조건이라서 false가 계속 출력됐던 것
+
+    [] 대신에 [show]를 넣는 이유는 값을 한 번만 변경해야 하기 때문에 show를 명시적으로 넣음
+    */
 
     return (
         <div>
