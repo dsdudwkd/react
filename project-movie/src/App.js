@@ -3,7 +3,11 @@ import './App.css';
 import Header from './component/Header';
 import GlobalStyle from './style/GlobalStyle';
 import Ex from './component/Ex';
-import UseRef from './component/useRef';
+import UseRef from './component/UseRef';
+import UseRef2 from './component/UseRef2';
+import MainVideo from './component/MainVideo';
+
+
 
 
 function App() {
@@ -12,7 +16,9 @@ function App() {
     {/* <GlobalStyle/>
     <Header /> */}
     {/* <Ex/> */}
-    <UseRef />
+    {/* <UseRef /> */}
+    {/* <UseRef2 /> */}
+    <MainVideo />
     </>
   );
 }
