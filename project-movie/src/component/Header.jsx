@@ -23,7 +23,7 @@ function Header(props) {
                 } else if(window.scrollY <= 100 && show){
                     setShow(false);
                 }
-                console.log(window.scrollY, show);
+                // console.log(window.scrollY, show);
             }
             window.addEventListener('scroll', scrollEvent);
             
