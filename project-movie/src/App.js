@@ -11,6 +11,8 @@ import { Provider } from 'react-redux';
 import rootReducer from './store/reducer';
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
+import { Route, Routes } from 'react-router-dom';
+import MovieDetail from './page/MovieDetail';
 
 /* 
 reducer는 객체 형태만 가져올 수 있으며, 함수 형태는 가져올 수 없다
@@ -34,6 +36,9 @@ function App() {
       <Provider store={store}>
         <MovieList />
       </Provider>
+      <Routes>
+        <Route path='/movie/:movieId' element={<MovieDetail />} />
+      </Routes>
     </>
   );
 }

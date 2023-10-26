@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
-import ActionMovie from './reducerActionMovie';
+import { FETCH_ACTION_MOVIES, FETCH_COMEDY_MOVIES } from '..';
+// import ActionMovie from './reducerActionMovie';
 /* 
 redux 설치 명령어
 yarn add redux
@@ -27,8 +28,37 @@ dispatch는 store에서 action을 전달하기 위해서 제공하는 방법
 
 //여러 개의 reducer를 하나의 store에서 실행할 수 있도록 해주는 메서드
 //장르마다 불러올 reducer가 다르기 때문에 한 번에 관리할 수 있는 combineReducers를 사용
+
+const actionMoviesReducer = (state = [], action) => {
+    switch (action.type){
+        case FETCH_ACTION_MOVIES:
+            return{
+                ...state,
+                movies : action.data
+            }
+
+        default : 
+            return state;
+    }
+}
+
+//comedy
+const comedyMoviesReducer = (state = [], action) => {
+    switch (action.type){
+        case FETCH_COMEDY_MOVIES:
+            return{
+                ...state,
+                movies : action.data
+            }
+
+        default : 
+            return state;
+    }
+}
+
 const rootReducer = combineReducers({
-    action : ActionMovie,
+    action : actionMoviesReducer,
+    comedy : comedyMoviesReducer,
 })
 
 export default rootReducer;
