@@ -38,7 +38,7 @@ function MainVideo(props) {
                     setShowImage(false);
                 },2000)
             }
-            console.log(res);
+            // console.log(res);
         }catch(error){
             console.log(error);
         }

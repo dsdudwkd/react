@@ -4,11 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import NotFound from './page/NotFound';
+import MovieDetail from './page/MovieDetail';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <App />,
+    errorElement : <NotFound />
+  },
+  {
+    //id값이 계속 바뀌어야하므로 :을 넣어야함
+    path : 'movie/:movieId',
+    element : <MovieDetail />,
+    errorElement : <NotFound />
+
   }
 ]);
 
