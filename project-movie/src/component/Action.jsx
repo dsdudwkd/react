@@ -24,8 +24,11 @@ function Action(props) {
     const [isClick, setIsClick] = useState(false); //클릭한 인덱스
     const [isSelect, setIsSelect] = useState({}); //클릭한 인덱스의 영화의 정보
 
+<<<<<<< HEAD
     const [zIndex, setZIndex] = useState(1);
 
+=======
+>>>>>>> 6170405ac10703d3c71dec3d0e03e47eecd5e8bf
     useEffect(() => {
         dispatch(fetchActionMovies());
     }, [])
@@ -39,8 +42,11 @@ function Action(props) {
         setIsClick(index);
         setIsSelect(movie);
         // console.log(isClick, isSelect);
+<<<<<<< HEAD
         // setZIndex(zIndex + 998);
         setZIndex(999);
+=======
+>>>>>>> 6170405ac10703d3c71dec3d0e03e47eecd5e8bf
     }
 
     const overViewClose = () => {
@@ -49,7 +55,11 @@ function Action(props) {
 
     return (
         <div>
+<<<<<<< HEAD
             <MovieContainer style={{zIndex : isClick !== null? zIndex : 1}}>{/* MovieContainer는 스타일 컴포넌트 */}
+=======
+            <MovieContainer>{/* MovieContainer는 스타일 컴포넌트 */}
+>>>>>>> 6170405ac10703d3c71dec3d0e03e47eecd5e8bf
                 <MovieTitle>액션</MovieTitle>
                 <Swiper
                     spaceBetween={5} // 슬라이드와 슬라이드 사이 여백(gap)
@@ -82,7 +92,10 @@ const MovieContainer = styled.div`
     box-sizing: border-box;
     margin-bottom: 50px;
     transform: translateY(-100px);
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 6170405ac10703d3c71dec3d0e03e47eecd5e8bf
 `
 
 const MovieTitle = styled.h2`
